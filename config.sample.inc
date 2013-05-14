@@ -15,7 +15,7 @@ $live = array(
   'db' => 'username:password@host:port',
   'memcache' => '',
   'smtp' => '25',
-  'backend' => 'http://localhost:8080/live/test.php',
+  'backend' => '8080',
 );
 */
 
@@ -26,3 +26,6 @@ $cache = 60; // second
 
 // show time and debug
 $debug = false;
+
+if($debug) ini_set('display_errors', 1);
+else ini_set('display_errors', 0);
