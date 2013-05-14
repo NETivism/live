@@ -9,9 +9,9 @@ This script will return string like this for monitor to watch services.
 
 Place this script to website, this can called by remote service then response available service in string.
 External monitor service such as:
-[pingdom](https://www.pingdom.com)
-[uptime](https://github.com/fzaninotto/uptime) of nodejs
-[monit](http://mmonit.com/monit/) of linux
+* [pingdom](https://www.pingdom.com)  or
+* [uptime](https://github.com/fzaninotto/uptime) of nodejs or
+* [monit](http://mmonit.com/monit/) of linux
 
 Install
 -------
