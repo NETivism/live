@@ -16,15 +16,15 @@ External monitor service such as:
 Install
 -------
 
-> cd to_your_web_dir
-> git clone git://github.com/jimyhuang/live.git
-> cd live
-> cp config.sample.inc config.inc
+``` sh
+cd to_your_web_dir
+git clone git://github.com/jimyhuang/live.git
+cd live
+cp config.sample.inc config.inc
+vim confic.inc # for config
+```
 
-config (detail description config)
-> vim confic.inc
-
-test
+Test url:
 > wget http://your_host/live/live.php
 
 Static version
@@ -36,7 +36,7 @@ Then provide static page for monitor service to prevent overhead.
 Cron setting
 > crontab -e
 
-Then add this line
+Then add this line into crontab
 > */3 * * * * wget -O - -q -t 1 http://your_host/live/live.php
 
 After cron success triggered, add url to external service
