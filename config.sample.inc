@@ -1,30 +1,28 @@
 <?php
-// initial setup
-// leave blank for disable live detect
-// for security reason, we suggest you can create empty db for test
+# leave array value to blank for disable live detect
 $live = array(
-  'db' => 'scheme://username:password@host:port/db',
-  'memcache' => '11211,11212',
+  'db' => 'scheme://username:password@host:port/db',     // you should create empty database for better security
+  'memcache' => '11211,11212',                           // multiple instance seperate by comma, whithout space
   'smtp' => '25',
-  'backend' => 'http://localhost:8080/live/test.php', // you can also use port to get quick result
+  'backend' => 'http://localhost:8080/live/test.php',    // you can also use port to get quick result
 );
 
-// another example: ok db:ok memcache:_ smtp:ok backend:ok
+# another example: ok db:ok memcache:_ smtp:ok backend:ok
 /*
 $live = array(
-  'db' => 'username:password@host:port',
-  'memcache' => '',
-  'smtp' => '25',
-  'backend' => '8080',
+  'db' => 'scheme://username:password@host:port/db',     // you should create empty database for better security
+  'memcache' => '',                                      // disabled
+  'smtp' => '25',                                        // port
+  'backend' => '8080',                                   // port
 );
 */
 
-// in second
-// will cache string into live.htm
-// and see the period greater then second
+# cache in second
+# will cache string into live.htm 
+# after seconds, this cache will overwrite by newer string
 $cache = 60; // second
 
-// show time and debug
+# show duration and debug info
 $debug = false;
 
 if($debug) ini_set('display_errors', 1);
