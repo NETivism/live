@@ -1,0 +1,15 @@
+Satisfy Any
+<FilesMatch "\.(inc|md)$">
+  Order allow,deny
+</FilesMatch>
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  # If you do not have mod_rewrite installed, you should remove these
+  # directories from your webroot or otherwise protect them from being
+  # downloaded.
+  RewriteRule "(^|/)\." - [F]
+</IfModule>
