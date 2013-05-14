@@ -4,7 +4,10 @@ live
 Live is a simple php script to monitor multiple service on the server.
 When we handle many servers, we need to know healthy of all the important service by one-time config.
 
-This script can called by remote service then response available service in string.
+This script will return string like this for monitor to watch services.
+> ok db:ok memcache:_ smtp:ok backend:ok
+
+Place this script to website, this can called by remote service then response available service in string.
 External monitor service such as:
 [pingdom](https://www.pingdom.com)
 [uptime](https://github.com/fzaninotto/uptime) of nodejs
@@ -43,3 +46,8 @@ After cron success triggered, add url to external service
 TODO
 ----
 More protocol support.
+
+LICENSE
+-------
+
+CC0 Public Domain
